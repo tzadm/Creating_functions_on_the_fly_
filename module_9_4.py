@@ -17,18 +17,20 @@ def get_advanced_writer(file_name):
 write = get_advanced_writer('example.txt')
 write('Это строчка', ['А', 'это', 'уже', 'число', 5, 'в', 'списке'])
 
+
 ###########################################################################################
 
 class MysticBall:
     def __init__(self, *words):
         self.words = words
 
-    def __call__(self, *args):
+    def __call__(self):
         import random as ch
         return ch.choice(self.words)
 
 
 first_ball = MysticBall('Да', 'Нет', 'Наверное', 'Примерно')
+
 print(first_ball())
 print(first_ball())
 print(first_ball())
